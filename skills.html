@@ -14,6 +14,19 @@
       body {
         font-family: "Space Grotesk", "Noto Sans", sans-serif;
       }
+
+      @keyframes fillBar {
+        from {
+          width: 0%;
+        }
+        to {
+          width: var(--fill-width);
+        }
+      }
+
+      .animate-bar {
+        animation: fillBar 1.5s ease-out forwards;
+      }
     </style>
   </head>
 
@@ -30,7 +43,6 @@
           Behramm Umrigar
         </a>
       </div>
-      </div>
       <nav class="flex items-center gap-9 text-sm font-medium">
         <a href="index.html" class="hover:text-[#64b5f6]">About</a>
         <a href="experience.html" class="hover:text-[#64b5f6]">Experience</a>
@@ -42,17 +54,6 @@
     </header>
 
     <main class="px-4 sm:px-6 md:px-10 py-6 max-w-5xl mx-auto w-full">
-      <style>
-        @keyframes fillBar {
-          from {
-            width: 0%;
-          }
-        }
-        .animate-fill {
-          animation: fillBar 1.5s ease-out forwards;
-        }
-      </style>
-    
       <!-- Intro -->
       <section class="mb-8">
         <h2 class="text-3xl font-bold mb-2">Skills</h2>
@@ -60,17 +61,17 @@
           A comprehensive overview of my technical and soft skills, highlighting my proficiency and experience in cybersecurity.
         </p>
       </section>
-    
-      <!-- Technical Skills with Bars -->
-      <section class="mb-10">
+
+      <!-- Technical Skills -->
+      <section id="skills" class="mb-10">
         <h3 class="text-xl font-bold mb-4">Technical Skills</h3>
         <div class="space-y-5">
           <div>
             <div class="flex justify-between mb-1 text-sm">
-              <span>Python</span><span>80%</span>
+              <span>Python</span><span>85%</span>
             </div>
             <div class="h-2 bg-[#2e3c4a] rounded">
-              <div class="h-full bg-[#64b5f6] rounded animate-fill" style="width: 90%"></div>
+              <div class="h-full bg-[#64b5f6] rounded skill-bar" style="--fill-width: 85%"></div>
             </div>
           </div>
           <div>
@@ -78,7 +79,7 @@
               <span>C++</span><span>65%</span>
             </div>
             <div class="h-2 bg-[#2e3c4a] rounded">
-              <div class="h-full bg-[#64b5f6] rounded animate-fill" style="width: 85%"></div>
+              <div class="h-full bg-[#64b5f6] rounded skill-bar" style="--fill-width: 65%"></div>
             </div>
           </div>
           <div>
@@ -86,36 +87,36 @@
               <span>SQL</span><span>70%</span>
             </div>
             <div class="h-2 bg-[#2e3c4a] rounded">
-              <div class="h-full bg-[#64b5f6] rounded animate-fill" style="width: 80%"></div>
+              <div class="h-full bg-[#64b5f6] rounded skill-bar" style="--fill-width: 70%"></div>
             </div>
           </div>
           <div>
             <div class="flex justify-between mb-1 text-sm">
-              <span>HTML / CSS</span><span>70%</span>
+              <span>HTML / CSS</span><span>65%</span>
             </div>
             <div class="h-2 bg-[#2e3c4a] rounded">
-              <div class="h-full bg-[#64b5f6] rounded animate-fill" style="width: 75%"></div>
+              <div class="h-full bg-[#64b5f6] rounded skill-bar" style="--fill-width: 65%"></div>
             </div>
           </div>
           <div>
             <div class="flex justify-between mb-1 text-sm">
-              <span>Node.js</span><span>55%</span>
+              <span>Node.js</span><span>50%</span>
             </div>
             <div class="h-2 bg-[#2e3c4a] rounded">
-              <div class="h-full bg-[#64b5f6] rounded animate-fill" style="width: 65%"></div>
+              <div class="h-full bg-[#64b5f6] rounded skill-bar" style="--fill-width: 50%"></div>
             </div>
           </div>
           <div>
             <div class="flex justify-between mb-1 text-sm">
-              <span>Cybersecurity Fundamentals</span><span>85%</span>
+              <span>Cybersecurity Fundamentals</span><span>80%</span>
             </div>
             <div class="h-2 bg-[#2e3c4a] rounded">
-              <div class="h-full bg-[#64b5f6] rounded animate-fill" style="width: 85%"></div>
+              <div class="h-full bg-[#64b5f6] rounded skill-bar" style="--fill-width: 80%"></div>
             </div>
           </div>
         </div>
       </section>
-    
+
       <!-- Certificates -->
       <section class="mb-10">
         <h3 class="text-xl font-bold mb-4">Certificates</h3>
@@ -127,7 +128,7 @@
           <li>Mastercard - Cybersecurity Job Simulation (Forage)</li>
         </ul>
       </section>
-    
+
       <!-- Soft Skills -->
       <section>
         <h3 class="text-xl font-bold mb-4">Soft Skills</h3>
@@ -159,5 +160,24 @@
         </div>
       </section>
     </main>
+
+    <!-- Scroll-triggered bar animation -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const bars = entry.target.querySelectorAll('.skill-bar');
+              bars.forEach(bar => bar.classList.add('animate-bar'));
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      const skillSection = document.getElementById('skills');
+      if (skillSection) observer.observe(skillSection);
+    </script>
   </body>
 </html>
