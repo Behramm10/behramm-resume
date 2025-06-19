@@ -19,16 +19,18 @@
 
   <body class="bg-[#14191f] text-white min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="flex items-center justify-between border-b border-[#2a3541] px-10 py-3">
-      <div class="flex items-center gap-4">
-        <div class="size-4">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+    <header class="border-b border-[#2a3541] px-4 sm:px-6 md:px-10 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-5 h-5 text-white" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" />
           </svg>
         </div>
-        <h1 class="text-lg font-bold tracking-tight">Behramm Umrigar</h1>
+        <a href="index.html" class="text-lg font-bold tracking-tight text-white hover:text-[#64b5f6] focus:outline-none focus:ring focus:ring-[#64b5f6] rounded-sm">
+          Behramm Umrigar
+        </a>
       </div>
-      <nav class="flex items-center gap-9 text-sm font-medium">
+      <nav class="flex flex-wrap justify-center gap-4 text-sm font-medium text-white">
         <a href="index.html" class="hover:text-[#64b5f6]">About</a>
         <a href="experience.html" class="hover:text-[#64b5f6]">Experience</a>
         <a href="project.html" class="hover:text-[#64b5f6]">Projects</a>
@@ -37,30 +39,29 @@
         <a href="resume.html" class="hover:text-[#64b5f6]">Resume</a>
       </nav>
     </header>
-
+  
     <!-- Main Content -->
-    <main class="px-10 py-8 max-w-5xl mx-auto w-full flex flex-col items-center text-center">
+    <main class="px-4 sm:px-6 md:px-10 py-8 max-w-5xl mx-auto w-full flex flex-col items-center text-center">
       <h2 class="text-3xl font-bold mb-2">Resume</h2>
-      <p class="text-[#9bacbf] text-sm mb-6 max-w-xl">
+      <p class="text-[#9bacbf] text-sm sm:text-base mb-6 max-w-xl">
         You can view or download my resume below to explore my professional background and qualifications.
       </p>
-
-      <!-- PDF Preview or Image Thumbnail -->
+  
+      <!-- Resume Preview -->
       <div class="w-full max-w-3xl mb-6 rounded-xl overflow-hidden shadow-lg border border-[#2a3541]">
         <iframe
           src="Behramm-Umrigar-Resume.pdf"
-          type="application/pdf"
           width="100%"
           height="600px"
           class="bg-[#1e252c]"
         >
           <p class="p-4 text-sm text-[#9bacbf]">
-            It looks like your browser doesn’t support embedded PDFs. You can
-            <a href="Behramm-Umrigar-Resume.pdf" class="text-[#64b5f6] underline">download the resume here</a>.
+            It looks like your browser doesn’t support embedded PDFs.
+            <a href="Behramm-Umrigar-Resume.pdf" class="text-[#64b5f6] underline">Download the resume here.</a>
           </p>
         </iframe>
       </div>
-
+  
       <!-- Download Button -->
       <a
         href="Behramm-Umrigar-Resume.pdf"
