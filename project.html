@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Behramm Umrigar</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      body {
+        font-family: "Space Grotesk", "Noto Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#111922] text-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="border-b border-[#233448] px-6 md:px-10 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-5 h-5 text-white" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" />
+          </svg>
+        </div>
+        <a href="about.html" class="text-lg font-bold tracking-tight text-white hover:text-[#6CAEFF] focus:outline-none focus:ring focus:ring-[#6CAEFF] rounded-sm">
+          Behramm Umrigar
+        </a>
+      </div>
+      </div>
+      <nav class="flex items-center gap-9">
+        <a href="about.html" class="text-sm font-medium hover:text-[#64b5f6]">About</a>
+        <a href="experience.html" class="text-sm font-medium hover:text-[#64b5f6]">Experience</a>
+        <a href="project.html" class="text-sm font-medium hover:text-[#64b5f6]">Projects</a>
+        <a href="skills.html" class="text-sm font-medium hover:text-[#64b5f6]">Skills</a>
+        <a href="contact.html" class="text-sm font-medium hover:text-[#64b5f6]">Contact</a>
+        <a href="resume.html" class="text-sm font-medium hover:text-[#64b5f6]">Resume</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 px-6 md:px-10 py-6 max-w-5xl mx-auto w-full">
+    <section class="mb-6">
+        <h2 class="text-3xl font-bold mb-2">Projects</h2>
+        <p class="text-[#93acc8] text-sm">
+        A selection of projects showcasing my skills in Python, web development, encryption, UI design, and secure systems.
+        </p>
+    </section>
+
+    <!-- Project Cards -->
+    <section class="grid gap-6">
+        <!-- Project 1: Secure Password Manager -->
+        <div class="flex flex-col md:flex-row gap-4 bg-[#1a2532] rounded-xl p-4 shadow">
+        <div class="flex-[2]">
+            <h3 class="text-base font-bold">Secure Password Manager</h3>
+            <p class="text-[#93acc8] text-sm mb-3">
+            Developed using Python and Tkinter, this desktop application provides encrypted password storage using Fernet. Includes intuitive UI and secure key management.
+            </p>
+            <a href="https://github.com/Behramm10/Password-Manager" target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-[#243447] text-white text-sm font-medium px-4 py-2 rounded-xl w-fit hover:bg-[#2e4a63] transition">
+            View Project
+            </a>
+        </div>
+        <div
+            class="flex-1 bg-cover bg-center rounded-xl aspect-video"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAhQTgeu5CN_ndsZvhDC-Xt8ZdiYkfZtgRO-6PXm7dWiRIaMutzc6LDmVSD25djpkwrRXRw54MMrLiksOFSYRRBTele-dCZReNeu7YXY9STCF8NrwHL_4AOkC2-utoaOQV8x84W3iYHDmJvUNBv5E0ivTN92conFilYdGJ3xYFAu7eTVGbosmEeOOv8UBIXG32hH_EVscDBVlQgqz9gt5vXwdJc4tYaZgiJ3GIxQhoKHKR4QEo3s3nVJqX0jjt8O0tIQjQC5SQ2Wo");'
+        ></div>
+        </div>
+
+        <!-- Project 2: Movie Ticket Booking System -->
+        <div class="flex flex-col md:flex-row gap-4 bg-[#1a2532] rounded-xl p-4 shadow">
+        <div class="flex-[2]">
+            <h3 class="text-base font-bold">Movie Ticket Booking System</h3>
+            <p class="text-[#93acc8] text-sm mb-3">
+            Built a web-based booking system using AngularJS and Supabase with real-time seat selection, secure booking flow, and auto-generated PDF tickets.
+            </p>
+            <a href="https://github.com/Behramm10/Movie-Ticket-Booking" target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-[#243447] text-white text-sm font-medium px-4 py-2 rounded-xl w-fit hover:bg-[#2e4a63] transition">
+            View Project
+            </a>
+        </div>
+        <div
+            class="flex-1 bg-cover bg-center rounded-xl aspect-video"
+            style='background-image: url("movie.png");'
+        ></div>
+        </div>
+
+        <!-- Project 3: Secure Online Wallet -->
+        <div class="flex flex-col md:flex-row gap-4 bg-[#1a2532] rounded-xl p-4 shadow">
+        <div class="flex-[2]">
+            <h3 class="text-base font-bold">Secure Online Wallet</h3>
+            <p class="text-[#93acc8] text-sm mb-3">
+            Designed with HTML, CSS, and Python, this secure wallet enables encrypted transactions, integrates intrusion prevention, and manages payments with strong user authentication.
+            </p>
+            <a href="https://github.com/Behramm10" target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-[#243447] text-white text-sm font-medium px-4 py-2 rounded-xl w-fit hover:bg-[#2e4a63] transition">
+            View Project
+            </a>
+        </div>
+        <div
+            class="flex-1 bg-cover bg-center rounded-xl aspect-video"
+            style='background-image: url("secure_wallet.png");'
+        ></div>
+        </div>
+    </section>
+    </main>
+
+  </body>
+</html>
+
